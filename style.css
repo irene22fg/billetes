@@ -1,0 +1,16 @@
+img{
+    margin: 10px;
+}
+
+span{
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#billetes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}

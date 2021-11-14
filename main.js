@@ -15,7 +15,7 @@ let divContainer = document.getElementById("billetes");
 })()
 
 function mostrarImagenes(foto){
-    let img = crearNodo("img", "", [], [{name:"src", value:"./img/" + foto.image}, {name:"id", value:foto.value}, {name:"width", value:"250"}, {name:"height", value:"130"}]);
+    let img = crearNodo("img", "", [], [{name:"src", value:"./img/" + foto.image}, {name:"id", value:foto.value}]);
     img.addEventListener('click', mostrarTotal);
     divContainer.appendChild(img);
 }

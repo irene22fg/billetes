@@ -15,14 +15,14 @@ let divContainer = document.getElementById("billetes");
 })()
 
 function mostrarImagenes(foto){
-    let img = crearNodo("img", "", [], [{name:"src", value:"./img/" + foto.image}, {name:"id", value:foto.value}]);
-    img.addEventListener('click', mostrarTotal);
+    let img = crearNodo("img", "", [], [{name:"src", value:"./img/" + foto.image}]);
+    img.addEventListener('click', () => mostrarTotal(foto));
     divContainer.appendChild(img);
 }
 
-function mostrarTotal(event){
+function mostrarTotal(foto){
     let valor = JSON.parse(localStorage.getItem("total"));
-    valor += parseInt(event.target.id);
+    valor += parseInt(foto.value);
     localStorage.removeItem("total");
     localStorage.setItem("total",JSON.stringify(valor));
     document.getElementById("total").firstElementChild.textContent = localStorage.getItem("total") + '€';
